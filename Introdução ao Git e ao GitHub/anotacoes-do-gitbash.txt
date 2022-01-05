@@ -1,0 +1,61 @@
+openssl sha1 nomedoarquivo (mostra o código do arquivo, logo se alguem mexer no arquivo, o código será diferente)
+
+CTRL+L limpa o historico de comandos e pesquisas no gitbash/terminal.
+
+mv arquivo ./pasta/ (move o arquivo para uma pasta especifica)
+
+pwd (mostrar todo caminho do arquivo)
+
+cd (entrar dentro de um arquivo,pasta)
+
+ls  (listar arquivos,pastas)
+mkdir nomepasta (criar pasta em algum repositório)
+
+ls -a (mostrar arquivos,pastas ocultas)
+
+echo "comentario" > nomedoarquivo.txt (Com esse comando consegue criar um arquivo e um comentario dentro)
+
+ssh-keygen -t nomearquivo -C email ( gerar chave publica e privada ) (acredito que ela seja gerada dentro da pasta /c/Users/usuario/.ssh/ - entrando você da ls pra ver as duas pastas.
+
+cat nomearquivo ( serve para ver a chave que foi criada acima^^^ se estiver dentro do repositorio /c/Users/usuario/.ssh/ ou colocar todo o caminho do arquivo.)
+
+git config --list ( mostra a lista do que será commitado? da pra colocar o usuario e email..) - use o comando Q para sair da lista.
+git config --global user.email "email" (para configurar o e-mail atrelado ao seu commit).
+git config --global user.name usuario (para configurar o usuário atrelado ao seu commit).
+
+git init (inicializar o uso do GIT / cria um repositorio)
+
+git remote -v (lista os repositórios.)
+
+git remote add origin site-que-copia-do-git-hub (Prepara nosso repositório local para ser enviado ao repositório remoto , "ORIGIN" antes do link do site que colocamos é um apelido padrão para nao precisarmos ficar colocando o site toda hora, só coloca origin mas pode ser qualquer outro nome)
+git push origin master (Literalmente EMPURRA o ORIGIN que é o apelido do nosso site para o repositório remoto.)
+
+existem os 3 conceitos do git:
+Unmodified - Modified - Staged
+
+unmodified: é um arquivo que acabou de ser criado, nao foi mexido (logo nao existe de certa forma)
+modified: é um arquivo que acabou de ser modificado, houve alguma alteração nele.
+Staged: é quando usamos o comando git add * para prepara-lo a um commmit.
+
+git add arquivo (Prepara o arquivo para ser salvo em um commit basicamente (STAGED))
+git add * (Prepara todos os arquivos do repositório para serem salvos em um commit (STAGED))
+git commit -m "comentario" (commit da um significado a alteração do arquivo, salva ele, mostra quem alterou, oque foi alterado, o quanto foi alterado.)
+basicamente, sempre que vc fazer um arquivo (unmodified) e altera-lo (modified), vc usa o GIT ADD para prepara-lo (staged) para um commit.
+Após usar o commit, o arquivo volta ao estado (unmodified, que basicamente é como se você acabasse de criar um novo arquivo com aqueles dados salvos) e assim sucessivamente vai usando os comandos, é um ciclo.
+
+
+repositório remoto
+Servidor do github, onde fica salvo o trabalho de fato.
+repositório local
+É o repositório de desenvolvimento onde se faz as alterações necessárias e quando está pronto deve-se enviar ao repositório remoto (apenas arquivos commitados).
+
+se a gente cria uma pasta e move o arquivo que havia sido commitado para dentro dela e usarmos o GIT STATUS, o sistema mostra que deletamos o arquivo ja que de acordo com o sistema aquela pasta nao existia (untracked).
+
+
+git status (verificar o status dos arquivos mostrando em que etapa estão, se já podem ser commitados)
+
+
+git clone site (clona um repositório para sua maquina)
+
+
+
